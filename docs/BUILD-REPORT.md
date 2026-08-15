@@ -8,6 +8,8 @@ I then added a locked inventory of files, a scanner for obvious secrets and priv
 
 The practical result is that a casual future file copy should fail the automated check instead of quietly reaching GitHub. Human review remains required because no scanner can understand every kind of sensitive business information.
 
+The six private build prompts were also turned from loose instructions into governed contracts. In plain language, each now has a name, version, required information, promised result, safety rules, and clear reasons to stop. A content lock detects accidental edits, and tests reject missing sections, path escapes, or attempts to permit external actions. Only this high-level description is public; the prompts and their controls remain private.
+
 After publication, the GitHub repository itself was locked down. Changes to `main` must now arrive through a reviewed pull request and pass both the project verification and GitHub's CodeQL analysis. GitHub also watches for leaked secrets and vulnerable dependencies. Even an administrator cannot bypass the protected-branch rules.
 
 ## Technical account
@@ -32,6 +34,8 @@ After publication, the GitHub repository itself was locked down. Changes to `mai
 - Verification pins the public claim-status vocabulary and checks the example's coverage ranges, labeling, UI status, disclaimer, and safe DOM rendering.
 - GitHub Actions runs the same deterministic checks on pushes and pull requests.
 - GitHub-owned workflow actions are pinned to reviewed, signed commit SHAs; Dependabot monitors them for updates.
+- Six private prompt roles have stable IDs and semantic versions, required input/output/safety/stop contracts, SHA-256 content locks, and deterministic registry tests.
+- Private prompt bodies, manifest data, lock hashes, evaluator rules, and registry tooling remain outside this public repository and its Git history.
 
 ### Technical-debt reduction
 

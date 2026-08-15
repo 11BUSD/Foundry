@@ -43,6 +43,8 @@ The checks verify the public/private boundary, scan for recognizable secrets and
 
 This repository publishes the **method**, not the private machinery. The private core belongs in a separate private repository with a separate Git history, access policy, and release process. See `docs/PUBLIC-PRIVATE-BOUNDARY.md`.
 
+The private build prompts are governed separately with stable identifiers, versions, explicit input/output/safety/stop contracts, content locks, and deterministic checks. Their bodies, registries, lock hashes, evaluator rules, and execution tooling are intentionally absent from this public repository.
+
 ## Current maturity
 
 This is a public methodology and static synthetic demo, not a production evidence system. It does not retrieve sources, run AI reviewers, monitor drift, calculate real outcomes, or perform external actions. The interface illustrates the intended reasoning discipline; it must not be read as proof that those production capabilities exist here.

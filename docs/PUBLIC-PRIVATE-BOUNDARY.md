@@ -18,8 +18,8 @@ This repository explains the method and shows a made-up example. The private rep
 
 ### Never allowed here
 
-- private orchestration prompts or model-routing policy;
-- internal agent configuration, evaluator thresholds, or release gates;
+- private prompt bodies, prompt registries, content locks, or model-routing policy;
+- internal agent configuration, evaluator contracts, thresholds, release gates, or execution tooling;
 - domain packs built from private or client information;
 - source-ranking heuristics and authority weighting;
 - customer, prospect, appraisal, legal, financial, medical, or regulatory records;
