@@ -8,6 +8,8 @@ I then added a locked inventory of files, a scanner for obvious secrets and priv
 
 The practical result is that a casual future file copy should fail the automated check instead of quietly reaching GitHub. Human review remains required because no scanner can understand every kind of sensitive business information.
 
+After publication, the GitHub repository itself was locked down. Changes to `main` must now arrive through a reviewed pull request and pass both the project verification and GitHub's CodeQL analysis. GitHub also watches for leaked secrets and vulnerable dependencies. Even an administrator cannot bypass the protected-branch rules.
+
 ## Technical account
 
 ### Source integrity
@@ -38,9 +40,20 @@ The practical result is that a casual future file copy should fail the automated
 - Formatting, line endings, ignored sensitive files, contribution rules, security reporting, and pull-request review criteria are now explicit.
 - Dependabot watches the pinned GitHub Actions references for reviewed updates.
 
+### Verified GitHub host controls
+
+- `main` requires a current branch, one Write-level approval, resolved review conversations, `verify`, and `Analyze (javascript-typescript)`.
+- New commits dismiss stale approvals; administrators are subject to the same branch rules.
+- Linear history is required, and force-pushes plus branch deletion are blocked.
+- Only squash merging is enabled; merged feature branches are deleted automatically.
+- GitHub Actions default to read-only permissions and cannot approve pull requests.
+- Only GitHub-owned actions may run, and every action reference must use an immutable commit SHA.
+- Secret scanning, push protection, private vulnerability reporting, dependency alerts, automated security fixes, Dependabot security updates, and weekly CodeQL default setup are enabled.
+- The post-configuration audit found zero open CodeQL, secret-scanning, or Dependabot alerts.
+
 ### Remaining limits
 
 - Pattern-based secret scanning can miss novel secrets or flag harmless text.
-- Branch settings and GitHub security features are repository-host controls and must be verified after the first push.
+- GitHub reports its optional non-provider secret-pattern and secret-validity modes as disabled for this repository; standard secret scanning and push protection are active.
 - The public interface is educational; it is not a real evidence engine.
 - The private core requires its own private GitHub destination before it can be published safely.
