@@ -29,13 +29,14 @@ The practical result is that a casual future file copy should fail the automated
 - The demo remains explicitly synthetic and preserves a visible contradiction plus required human authority.
 - Verification pins the public claim-status vocabulary and checks the example's coverage ranges, labeling, UI status, disclaimer, and safe DOM rendering.
 - GitHub Actions runs the same deterministic checks on pushes and pull requests.
+- GitHub-owned workflow actions are pinned to reviewed, signed commit SHAs; Dependabot monitors them for updates.
 
 ### Technical-debt reduction
 
 - Runtime dependencies remain at zero.
 - Browser rendering uses `textContent` and DOM construction rather than `innerHTML`.
 - Formatting, line endings, ignored sensitive files, contribution rules, security reporting, and pull-request review criteria are now explicit.
-- Dependabot watches GitHub Actions references for updates.
+- Dependabot watches the pinned GitHub Actions references for reviewed updates.
 
 ### Remaining limits
 
