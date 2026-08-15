@@ -1,0 +1,16 @@
+{
+  "name": "evidence-before-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public methodology and synthetic demonstration for evidence-grounded decisions.",
+  "type": "module",
+  "scripts": {
+    "check:boundary": "node scripts/check-public-boundary.mjs",
+    "verify": "node scripts/verify.mjs",
+    "test": "npm run check:boundary && npm run verify"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

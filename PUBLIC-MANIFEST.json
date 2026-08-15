@@ -1,0 +1,37 @@
+{
+  "classification": "PUBLIC",
+  "repository": "11BUSD/Foundry",
+  "rules": {
+    "default_for_unlisted_files": "REJECT",
+    "data_policy": "synthetic-only",
+    "production_secrets_allowed": false,
+    "private_core_allowed": false
+  },
+  "files": {
+    ".editorconfig": "repository formatting rules",
+    ".gitattributes": "cross-platform Git normalization",
+    ".github/dependabot.yml": "GitHub Actions update monitoring",
+    ".github/pull_request_template.md": "review and boundary checklist",
+    ".github/workflows/verify.yml": "deterministic public safety checks",
+    ".gitignore": "local and sensitive-file exclusions",
+    "CONTRIBUTING.md": "public contribution requirements",
+    "DECISION-TREE.md": "generic public decision flow",
+    "LICENSE": "MIT license",
+    "METHODOLOGY.md": "public evidence methodology",
+    "PUBLIC-MANIFEST.json": "fail-closed public file inventory",
+    "README.md": "public project overview",
+    "SECURITY.md": "public security reporting and boundaries",
+    "app.js": "synthetic demo presentation logic",
+    "docs/ARCHITECTURE.md": "public conceptual architecture",
+    "docs/BUILD-REPORT.md": "layman and technical implementation report",
+    "docs/PUBLIC-PRIVATE-BOUNDARY.md": "publication boundary policy",
+    "examples/synthetic-case.json": "synthetic example data",
+    "index.html": "synthetic public demo",
+    "package-lock.json": "reproducible zero-dependency package metadata",
+    "package.json": "zero-dependency verification commands",
+    "schemas/claim.schema.json": "generic public claim schema",
+    "scripts/check-public-boundary.mjs": "fail-closed boundary and secret scanner",
+    "scripts/verify.mjs": "structural and semantic checks",
+    "styles.css": "synthetic demo styling"
+  }
+}

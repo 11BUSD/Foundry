@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-001",
+  "domain": "synthetic-equipment-claim",
+  "decision": "Is the submitted evidence sufficient to send this case to authorized human review?",
+  "status": "READY_WITH_LIMITATIONS",
+  "evidence_coverage": 0.86,
+  "primary_source_coverage": 0.71,
+  "unresolved_contradictions": 1,
+  "human_authority_required": true,
+  "note": "Synthetic educational example only."
+}
